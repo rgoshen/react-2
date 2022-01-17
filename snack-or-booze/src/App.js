@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 import Item from './components/Item';
 import { snackContent, drinkContent } from './content';
+import NotFoundPage from './components/Custom404';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,8 +59,8 @@ function App() {
             <Route path='/drinks/:id'>
               <Item items={drinks} cantFind='/drinks' />
             </Route>
-            <Route>
-              <p>Hmmm. I can't seem to find what you want.</p>
+            <Route path='*'>
+              <NotFoundPage />
             </Route>
           </Switch>
         </main>
