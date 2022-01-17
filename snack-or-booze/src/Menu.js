@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './DrinkMenu.css';
+import './Menu.css';
 import {
   Card,
   CardBody,
@@ -10,22 +10,23 @@ import {
   ListGroupItem,
 } from 'reactstrap';
 
-function DrinkMenu({ drinks }) {
+function Menu({ items, title }) {
+  const route = title.toLowerCase();
   return (
     <section className='col-md-4'>
       <Card>
         <CardBody>
           <CardTitle className='font-weight-bold text-center'>
-            Drink Menu
+            {title}
           </CardTitle>
           <CardText>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </CardText>
           <ListGroup>
-            {drinks.map((drink) => (
-              <Link to={`/drinks/${drink.id}`} key={drink.id}>
-                <ListGroupItem>{drink.name}</ListGroupItem>
+            {items.map((item) => (
+              <Link to={`/${route}/${item.id}`} key={item.id}>
+                <ListGroupItem>{item.name}</ListGroupItem>
               </Link>
             ))}
           </ListGroup>
@@ -35,4 +36,4 @@ function DrinkMenu({ drinks }) {
   );
 }
 
-export default DrinkMenu;
+export default Menu;

@@ -5,10 +5,8 @@ import Home from './Home';
 import SnackOrBoozeApi from './Api';
 import NavBar from './NavBar';
 import { Route, Switch } from 'react-router-dom';
-import FoodMenu from './FoodMenu';
-import Snack from './FoodItem';
-import DrinkMenu from './DrinkMenu';
-import Drink from './DrinkItem';
+import Menu from './Menu';
+import Item from './Item';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,16 +45,16 @@ function App() {
               <Home snacks={snacks} drinks={drinks} />
             </Route>
             <Route exact path='/snacks'>
-              <FoodMenu snacks={snacks} title='Snacks' />
+              <Menu items={snacks} title='Snacks' />
             </Route>
             <Route path='/snacks/:id'>
-              <Snack items={snacks} cantFind='/snacks' />
+              <Item items={snacks} cantFind='/snacks' />
             </Route>
             <Route exact path='/drinks'>
-              <DrinkMenu drinks={drinks} title='Drinks' />
+              <Menu items={drinks} title='Drinks' />
             </Route>
             <Route path='/drinks/:id'>
-              <Drink items={drinks} cantFind='/drinks' />
+              <Item items={drinks} cantFind='/drinks' />
             </Route>
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>
