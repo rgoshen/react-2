@@ -60,7 +60,7 @@ Demo:
 
 ### Skills/tools/technologies in Madlibs
 
-- React.js using the [Create React App](https://github.com/facebook/create-react-app)
+- [React.js](https://reactjs.org/)
 
 #### Getting Started
 
