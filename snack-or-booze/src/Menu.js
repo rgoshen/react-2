@@ -16,7 +16,7 @@ function Menu({ items, title }) {
       <Card>
         <CardBody>
           <CardTitle className='font-weight-bold text-center'>
-            {title}
+            {title} Menu
           </CardTitle>
           <ListGroup>
             {items.map((item) => (
