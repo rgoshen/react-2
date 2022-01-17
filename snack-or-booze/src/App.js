@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
-import Home from './Home';
-import SnackOrBoozeApi from './Api';
-import NavBar from './NavBar';
-import Menu from './Menu';
-import Item from './Item';
+import './styles/App.css';
+import Home from './components/Home';
+import SnackOrBoozeApi from './api/Api';
+import NavBar from './components/NavBar';
+import Menu from './components/Menu';
+import Item from './components/Item';
 import { snackContent, drinkContent } from './content';
 
 function App() {
