@@ -41,6 +41,10 @@ unroll(smallerSquare); // ['a', 'b', 'c', 'f', 'i', 'h', 'g', 'd', 'e']
 
 ## Part 3: React Snack or Booze
 
+### Description
+
+It is an assessment for the [Springboard](https://www.springboard.com/) React section.  It is a cafe page which can show drink items and snack items.  It also allows the user to add either a snack or drink item.  There is no authenication required for this project.
+
 ### Requirements
 
 - The homepage should show the # of food items (“snacks”) and drink choices (“drinks”)
@@ -54,11 +58,28 @@ unroll(smallerSquare); // ['a', 'b', 'c', 'f', 'i', 'h', 'g', 'd', 'e']
 
 The app does not need any kind of login or authentication; everyone can see everything and can add new items.
 
-Demo:
+### Preview
+
+Home page
+![homepage]()
+
+Snacks menu, it lists the snacks and you can click on each snack for the description.
+![snacks]()
+
+Drinks menu, it lists the drinks and you can click on each drink for the description.
+![drinks]()
+
+Add Item, the user can add a snack or drink to the menu.
+![additem]()
+
+When you try to access a route that does not exist.
+![custom404]()
+
+#### Demo:
 
 ![snackorbooze]()
 
-### Skills/tools/technologies in Madlibs
+### Skills/tools/technologies in Snack or Booze
 
 - [React.js](https://reactjs.org/)
 
