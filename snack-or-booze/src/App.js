@@ -36,24 +36,18 @@ function App() {
     getDrinks();
   }, []);
 
-  // Function to pass down to form to update db
+  // Function to pass down to form to update state
   const add = (formData, type) => {
     if (type === 'snacks') {
       setSnacks((snacks) => [
         ...snacks,
         { ...formData, id: formatId(formData.name) },
       ]);
-      console.log('====================================');
-      console.log(snacks);
-      console.log('====================================');
     } else {
       setDrinks((drinks) => [
         ...drinks,
         { ...formData, id: formatId(formData.name) },
       ]);
-      console.log('====================================');
-      console.log(drinks);
-      console.log('====================================');
     }
   };
 
