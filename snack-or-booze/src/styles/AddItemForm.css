@@ -5,6 +5,9 @@
   box-shadow: inset 0 0 0 2px #ffffff;
   box-sizing: border-box;
 }
+.card-title {
+  text-align: center;
+}
 
 button a {
   color: grey;

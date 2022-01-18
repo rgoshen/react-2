@@ -43,7 +43,8 @@ function AddItemForm({ add }) {
         <CardBody>
           <CardTitle>Add {type}</CardTitle>
           <Form className='inline' onSubmit={handleSubmit}>
-            <FormGroup floating>
+            <FormGroup>
+              <Label htmlFor='name'>Name</Label>
               <Input
                 onChange={handleChange}
                 id='name'
@@ -52,9 +53,9 @@ function AddItemForm({ add }) {
                 type='text'
                 value={formData.name}
               />
-              <Label htmlFor='name'>Name</Label>
             </FormGroup>
-            <FormGroup floating>
+            <FormGroup>
+              <Label htmlFor='serve'>Serve</Label>
               <Input
                 onChange={handleChange}
                 id='serve'
@@ -63,9 +64,9 @@ function AddItemForm({ add }) {
                 type='text'
                 value={formData.serve}
               />
-              <Label htmlFor='serve'>Serve</Label>
             </FormGroup>
-            <FormGroup floating>
+            <FormGroup>
+              <Label htmlFor='description'>Description</Label>
               <Input
                 onChange={handleChange}
                 id='description'
@@ -74,9 +75,9 @@ function AddItemForm({ add }) {
                 type='text'
                 value={formData.description}
               />
-              <Label htmlFor='description'>Description</Label>
             </FormGroup>
-            <FormGroup floating>
+            <FormGroup>
+              <Label htmlFor='recipe'>Recipe</Label>
               <Input
                 onChange={handleChange}
                 id='recipe'
@@ -85,7 +86,6 @@ function AddItemForm({ add }) {
                 type='text'
                 value={formData.recipe}
               />
-              <Label htmlFor='recipe'>Recipe</Label>
             </FormGroup>{' '}
             <Button
               outline
