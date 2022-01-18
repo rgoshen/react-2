@@ -43,7 +43,7 @@ unroll(smallerSquare); // ['a', 'b', 'c', 'f', 'i', 'h', 'g', 'd', 'e']
 
 ### Description
 
-It is an assessment for the [Springboard](https://www.springboard.com/) React section.  It is a cafe page which can show drink items and snack items.  It also allows the user to add either a snack or drink item.  There is no authenication required for this project.
+It is an assessment for the [Springboard](https://www.springboard.com/) React section. It is a cafe page which can show drink items and snack items. It also allows the user to add either a snack or drink item. There is no authenication required for this project.
 
 ### Requirements
 
@@ -61,27 +61,31 @@ The app does not need any kind of login or authentication; everyone can see ever
 ### Preview
 
 Home page
-![homepage]()
+
+![homepage](./images/homepage.png)
 
 Snacks menu, it lists the snacks and you can click on each snack for the description.
-![snacks]()
+
+![snacksmenu](./images/snacksmenu.png)
+![snackitem](./images/snackmenuitem.png)
 
 Drinks menu, it lists the drinks and you can click on each drink for the description.
-![drinks]()
+
+![drinksmenu](./images/drinksmenu.png)
+![drinksmenuitem](./images/drinkmenuitem.png)
 
 Add Item, the user can add a snack or drink to the menu.
-![additem]()
+
+![additemform](./images/additemform.png)
 
 When you try to access a route that does not exist.
-![custom404]()
 
-#### Demo:
-
-![snackorbooze]()
+![custom404](./images/custom404.png)
 
 ### Skills/tools/technologies in Snack or Booze
 
 - [React.js](https://reactjs.org/)
+- [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
 
 #### Getting Started
 
