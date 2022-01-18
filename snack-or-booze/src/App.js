@@ -7,7 +7,9 @@ import NavBar from './components/NavBar';
 import Menu from './components/Menu';
 import Item from './components/Item';
 import { snackContent, drinkContent } from './content';
+import AddItemForm from './components/AddItemForm';
 import NotFoundPage from './components/Custom404';
+import formatId from './helpers/formatId';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,6 +36,28 @@ function App() {
     getDrinks();
   }, []);
 
+  // Function to pass down to form to update db
+  const add = (formData, type) => {
+    if (type === 'snacks') {
+      setSnacks((snacks) => [
+        ...snacks,
+        { ...formData, id: formatId(formData.name) },
+      ]);
+      console.log('====================================');
+      console.log(snacks);
+      console.log('====================================');
+    } else {
+      setDrinks((drinks) => [
+        ...drinks,
+        { ...formData, id: formatId(formData.name) },
+      ]);
+      console.log('====================================');
+      console.log(drinks);
+      console.log('====================================');
+    }
+  };
+
+  // Shows "Loading..." until data is received
   if (isLoading) {
     return <p>Loading &hellip;</p>;
   }
@@ -46,6 +70,9 @@ function App() {
           <Switch>
             <Route exact path='/'>
               <Home snacks={snacks} drinks={drinks} />
+            </Route>
+            <Route exact path='/:type/add'>
+              <AddItemForm add={add} />
             </Route>
             <Route exact path='/snacks'>
               <Menu items={snacks} title='Snacks' content={snackContent} />

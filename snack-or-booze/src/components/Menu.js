@@ -6,8 +6,10 @@ import {
   CardBody,
   CardTitle,
   CardText,
+  CardFooter,
   ListGroup,
   ListGroupItem,
+  Button,
 } from 'reactstrap';
 
 function Menu({ items, title, content }) {
@@ -28,6 +30,11 @@ function Menu({ items, title, content }) {
             ))}
           </ListGroup>
         </CardBody>
+        <CardFooter>
+          <Button outline>
+            <Link to={`/${route}/add`}>Add {title}</Link>
+          </Button>
+        </CardFooter>
       </Card>
     </section>
   );
