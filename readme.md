@@ -4,6 +4,8 @@
 
 Answer the following questions in conceptual.
 
+[conceptual](/conceptual.md)
+
 ## Part 2: unroll
 
 Write a function called unroll, which takes in a square array of arrays (i.e. a grid with n rows and n columns). An input could look like this:
